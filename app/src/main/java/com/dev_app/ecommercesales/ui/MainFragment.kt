@@ -44,7 +44,7 @@ class MainFragment : Fragment() {
             "Socks",
             "Pants",
             "Jackets",
-            "Daniel"
+            "Sandals"
         )
 
         root.categoriesRecyclerView.apply {
