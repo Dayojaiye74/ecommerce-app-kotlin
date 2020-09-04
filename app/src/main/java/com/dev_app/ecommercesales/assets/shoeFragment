@@ -8,19 +8,18 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dev_app.ecommercesales.databinding.FragmentShoesBinding
-import kotlinx.android.synthetic.main.fragment_shoes.*
+
 
 
 class shoesFragment : Fragment() {
 
-    private lateinit var viewModel: ShoesVIewModel
-    private lateinit var binding: FragmentShoesBinding
+//    private lateinit var viewModel: ShoesVIewModel
+//    private lateinit var binding: FragmentShoesBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?): View? {
-        binding = DataBindingUtil.inflate(
+       return inflater.inflate(
             inflater, R.layout.fragment_shoes, container,false
 
         )

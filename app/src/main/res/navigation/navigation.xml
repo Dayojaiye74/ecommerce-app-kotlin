@@ -11,11 +11,6 @@
         android:label="fragment_cart"
         tools:layout="@layout/fragment_cart" />
     <fragment
-        android:id="@+id/profileFragment"
-        android:name="com.dev_app.ecommercesales.ui.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
-    <fragment
         android:id="@+id/homeFragment"
         android:name="com.dev_app.ecommercesales.ui.MainFragment"
         android:label="fragment_home"
@@ -24,9 +19,4 @@
         android:id="@+id/searchFragment"
         android:name="com.dev_app.ecommercesales.ui.SearchFragment"
         android:label="SearchFragment" />
-    <fragment
-        android:id="@+id/shoesFragment"
-        android:name="com.dev_app.ecommercesales.shoesFragment"
-        android:label="fragment_shoes"
-        tools:layout="@layout/fragment_shoes" />
 </navigation>
