@@ -20,5 +20,10 @@
         android:id="@+id/searchFragment"
         android:name="com.dev_app.ecommercesales.ui.SearchFragment"
         android:label="SearchFragment" />
+    <fragment
+        android:id="@+id/shoeFragment"
+        android:name="com.dev_app.ecommercesales.ui.ShoeFragment"
+        android:label="fragment_shoe"
+        tools:layout="@layout/fragment_shoe" />
 
 </navigation>

@@ -17,8 +17,8 @@
         android:icon="@drawable/ic_shopping_cart"/>
 
     <item
-        android:title="Profile"
-        android:id="@+id/profileFragment"
+        android:title="Shoes"
+        android:id="@+id/shoeFragment"
         android:icon="@drawable/ic_profile"/>
 
 

@@ -1,5 +1,4 @@
 package com.dev_app.ecommercesales.adapter
-
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -7,17 +6,16 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.dev_app.ecommercesales.R
-import com.dev_app.ecommercesales.models.Product
+import com.dev_app.ecommercesales.models.ShoesProduct
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.product_row.view.*
 
+class ShoesAdapter(
+    private val products: List<ShoesProduct>,
+    private val onClickShoesProduct: (title: String, photoUrl: String, photoView: View) -> Unit
+) : RecyclerView.Adapter<ShoesAdapter.ViewHolder>() {
 
-class ProductsAdapter(
-    private val products: List<Product>,
-    private val onClickProduct: (title: String, photoUrl: String, photoView: View) -> Unit
-) : RecyclerView.Adapter<ProductsAdapter.ViewHolder>() {
-
-    override fun onBindViewHolder(holder: ProductsAdapter.ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: ShoesAdapter.ViewHolder, position: Int) {
         val product = products[position]
         Picasso.get().load(product.photoUrl).into(holder.image)
         holder.title.text = product.title
@@ -30,12 +28,12 @@ class ProductsAdapter(
         }
 
         holder.image.setOnClickListener {
-            onClickProduct.invoke(product.title, product.photoUrl, holder.image)
+            onClickShoesProduct.invoke(product.title, product.photoUrl, holder.image)
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.product_row, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.shoe_product_row, parent, false)
         return ViewHolder(view)
     }
 
