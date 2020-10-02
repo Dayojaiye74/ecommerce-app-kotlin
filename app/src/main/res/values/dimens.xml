@@ -10,4 +10,8 @@
     <dimen name="card_margin">5dp</dimen>
     <dimen name="frutorial_title">15sp</dimen>
 
+    <dimen name="divider_width">0.5dp</dimen>
+    <dimen name="font_size_small">14sp</dimen>
+
+
 </resources>

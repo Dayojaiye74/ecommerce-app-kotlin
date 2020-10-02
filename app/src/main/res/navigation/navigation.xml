@@ -6,12 +6,6 @@
     app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/cartFragment"
-        android:name="com.dev_app.ecommercesales.ui.CartFragment"
-        android:label="fragment_cart"
-        tools:layout="@layout/fragment_cart" />
-
-    <fragment
         android:id="@+id/homeFragment"
         android:name="com.dev_app.ecommercesales.ui.MainFragment"
         android:label="fragment_home"
@@ -21,9 +15,9 @@
         android:name="com.dev_app.ecommercesales.ui.SearchFragment"
         android:label="SearchFragment" />
     <fragment
-        android:id="@+id/shoeFragment"
-        android:name="com.dev_app.ecommercesales.ui.ShoeFragment"
-        android:label="fragment_shoe"
-        tools:layout="@layout/fragment_shoe" />
+        android:id="@+id/settingsFragment"
+        android:name="com.dev_app.ecommercesales.SettingsFragment"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 
 </navigation>

@@ -12,13 +12,8 @@
         android:icon="@drawable/ic_search"/>
 
     <item
-        android:title="Cart"
-        android:id="@+id/cartFragment"
-        android:icon="@drawable/ic_shopping_cart"/>
-
-    <item
-        android:title="Shoes"
-        android:id="@+id/shoeFragment"
+        android:title="Profile"
+        android:id="@+id/settingsFragment"
         android:icon="@drawable/ic_profile"/>
 
 

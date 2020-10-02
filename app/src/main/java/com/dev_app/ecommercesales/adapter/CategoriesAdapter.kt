@@ -10,6 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.dev_app.ecommercesales.R
 import kotlinx.android.synthetic.main.category_row.view.*
 
+/*
+
 class CategoriesAdapter(
     private val categories: List<String>)
     : RecyclerView.Adapter<CategoriesAdapter.ViewHolder>() {
@@ -35,4 +37,4 @@ class CategoriesAdapter(
 //    }
 
 }
-
+*/
