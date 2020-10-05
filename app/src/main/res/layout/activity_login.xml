@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:backgroundTint="@color/colorAccent"
-                android:text="Login"
+                android:text="LOGIN TO CONTINUE"
                 android:textColor="@color/white"
                 android:textStyle="bold"
                 tools:ignore="HardcodedText" />

@@ -18,6 +18,7 @@ import androidx.cardview.widget.CardView
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -27,6 +28,7 @@ import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import com.dev_app.ecommercesales.BuildConfig
 import com.dev_app.ecommercesales.DetailPagActivity
+import com.dev_app.ecommercesales.PaymentActivity
 import com.dev_app.ecommercesales.R
 import com.dev_app.ecommercesales.database.AppDb1
 import com.dev_app.ecommercesales.models.Products
@@ -38,7 +40,6 @@ import java.lang.Exception
 
 @Suppress("unused")
 class MainFragment : Fragment() {
-
     private lateinit var rootView: View
     private lateinit var recyclerView1: RecyclerView
     lateinit var tabLayout: TabLayout
@@ -209,4 +210,27 @@ class MainFragment : Fragment() {
             appDb1.productsDao().insertProduct(sdata)
         }
     }
+
+    //...OnItem CLick
+
+    interface OnItemClickListener {
+        fun onItemClicked(position: Int, view: View)
+    }
+
+    fun RecyclerView.addOnItemClickListener(onClickListener: OnItemClickListener) {
+        this.addOnChildAttachStateChangeListener(object :
+            RecyclerView.OnChildAttachStateChangeListener {
+            override fun onChildViewDetachedFromWindow(view: View) {
+                view.setOnClickListener(null)
+            }
+
+            override fun onChildViewAttachedToWindow(view: View) {
+                view?.setOnClickListener {
+                    val holder = getChildViewHolder(view)
+                    onClickListener.onItemClicked(holder.adapterPosition, view)
+                }
+            }
+        })
+    }
+
 }

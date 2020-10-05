@@ -133,7 +133,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="8dp"
                     android:layout_marginTop="3dp"
-                    android:text="disclaimer"
+                    android:text="@string/disclaimer"
                     android:textColor="@color/played"
                     tools:ignore="HardcodedText" />
 

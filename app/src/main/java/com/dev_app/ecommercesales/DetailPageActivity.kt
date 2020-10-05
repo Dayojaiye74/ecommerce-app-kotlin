@@ -15,13 +15,12 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.ScrollView
 import android.widget.TextView
-import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NavUtils
 import androidx.core.content.ContextCompat
-import com.dev_app.ecommercesales.models.ConnectionClass
+import com.dev_app.ecommercesales.models.Products
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.activity_detail_page.*
 import kotlin.properties.Delegates
@@ -74,20 +73,12 @@ class DetailPagActivity : AppCompatActivity() {
 
         footer_cart.setOnClickListener {
 //            intent.putExtra("myprice",price.toString())
-            intent.putExtra("mytitle",desc_text.text)
+            intent.putExtra("mytitle", descriptionTitle.text)
            intent = Intent(this, PaymentActivity::class.java)
             startActivity(intent)
         }
-
                // mAlertDialog.dismiss()
-                //..get text..
-
-            //val int: Long =
-
             cardViewCall.setOnClickListener{
-//                val callIntent = Intent(Intent.ACTION_CALL)
-//                callIntent.data = Uri.parse("tel:07063551229")
-//                startActivity(callIntent)
                 onCall()
             }
 
