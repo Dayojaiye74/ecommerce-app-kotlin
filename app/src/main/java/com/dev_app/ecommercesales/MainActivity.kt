@@ -77,6 +77,8 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.title = "Buy For Me"
         supportActionBar!!.setDisplayShowTitleEnabled(true)
+
+
         val fragmentTransaction =
             supportFragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.fragment_container, fragment1)

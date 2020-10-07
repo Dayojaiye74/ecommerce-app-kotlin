@@ -4,7 +4,12 @@ import android.annotation.SuppressLint
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.TextView
+import android.widget.Toast
+import com.dev_app.ecommercesales.models.Products
+import com.dev_app.ecommercesales.ui.MainFragment
 import kotlinx.android.synthetic.main.activity_detail_page.*
 import kotlin.properties.Delegates
 
@@ -29,7 +34,13 @@ class PaymentActivity : AppCompatActivity() {
         //priceText.text = myText.toString()
        // priceText.text = "₦$priceText"
 
+//        recyclerView.addOnItemClickListener(
+//            object : MainFragment.OnItemClickListener {
+//                override fun onItemClicked(position: Int, view: View) {
+//                    // Your logic
+//                }
+//            })
+
     }
 }
-
 
