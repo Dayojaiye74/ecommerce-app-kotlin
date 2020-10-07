@@ -83,31 +83,32 @@ class EditProfileActivity : AppCompatActivity() {
                         logout.setOnClickListener {
                             editor.clear()
                             editor.apply()
-                            appDb.userDao().deleteUser(
-                                User(
-                                    firstname.text.toString(),
-                                    lastname.text.toString(),
-                                    age.text.toString(),
-                                    user_gender,
-                                    email.text.toString(),
-                                    password.text.toString()
+                            appDb.userDao()
+                                .deleteUser(
+                                    User(
+                                        firstname.text.toString(),
+                                        lastname.text.toString(),
+                                        age.text.toString(),
+                                        user_gender,
+                                        email.text.toString(),
+                                        password.text.toString()
+                                    )
                                 )
-                            )
                             val intent = Intent(this@EditProfileActivity, LoginActivity::class.java)
                             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
                             startActivity(intent)
                         }
                     }
                     "!log" -> {
-                        editprofile.text = "Register"
+                        editprofile.text = "Save Profile"
                         editprofile.setOnClickListener {
                             manageUser(
-                                firstname.text.toString(),
-                                lastname.text.toString(),
-                                age.text.toString(),
-                                user_gender,
-                                email.text.toString(),
-                                password.text.toString(), "insert"
+                                    firstname.text.toString(),
+                                    lastname.text.toString(),
+                                    age.text.toString(),
+                                    user_gender,
+                                    email.text.toString(),
+                                    password.text.toString(),"insert"
                             )
                         }
                     }
@@ -168,7 +169,7 @@ class EditProfileActivity : AppCompatActivity() {
                         appException.mainThread().execute {
                             Toast.makeText(
                                 applicationContext,
-                                "Some Error Occured Please Try Again",
+                                "Incorrect Login Details. Pls Try Again...",
                                 Toast.LENGTH_LONG
                             )
                                 .show()
@@ -193,7 +194,7 @@ class EditProfileActivity : AppCompatActivity() {
                         appException.mainThread().execute {
                             Toast.makeText(
                                 applicationContext,
-                                "Some Error Occured Please Try Again",
+                                "Incorrect Login Details. Pls Try Again...",
                                 Toast.LENGTH_LONG
                             )
                                 .show()

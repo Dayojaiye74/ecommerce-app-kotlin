@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.room.Room
 import com.dev_app.ecommercesales.database.AppDb
 import com.dev_app.ecommercesales.mail.AppExecutors
@@ -34,13 +35,17 @@ class LoginActivity : AppCompatActivity() {
 
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
         findViewById<TextInputLayout>(R.id.text_input_layout)
-        email = findViewById(R.id.phone)
+        email = findViewById(R.id.email)
         password = findViewById(R.id.password)
         button1 = findViewById(R.id.signin)
 
         button1.setOnClickListener {
             //TODO something
-            login(email.text.toString(), password.text.toString())
+            if (email.text.isEmpty() && password.text.isEmpty()){
+                Toast.makeText(this,"Required fields...",Toast.LENGTH_SHORT).show()
+            } else {
+                login(email.text.toString(), password.text.toString())
+            }
         }
     }
 

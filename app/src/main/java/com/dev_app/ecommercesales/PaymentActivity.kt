@@ -34,12 +34,12 @@ class PaymentActivity : AppCompatActivity() {
         //priceText.text = myText.toString()
        // priceText.text = "₦$priceText"
 
-        recyclerView.addOnItemClickListener(
-            object : MainFragment.OnItemClickListener {
-                override fun onItemClicked(position: Int, view: View) {
-                    // Your logic
-                }
-            })
+//        recyclerView.addOnItemClickListener(
+//            object : MainFragment.OnItemClickListener {
+//                override fun onItemClicked(position: Int, view: View) {
+//                    // Your logic
+//                }
+//            })
 
     }
 }

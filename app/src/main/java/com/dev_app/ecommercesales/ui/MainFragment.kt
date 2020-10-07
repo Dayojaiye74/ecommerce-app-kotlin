@@ -105,7 +105,7 @@ class MainFragment : Fragment() {
                 LayoutInflater.from(context).inflate(R.layout.pager_item, null)
             val imageView =
                 view.findViewById<ImageView>(R.id.image)
-            Picasso.get().load(getImageAt(position)).placeholder(R.drawable.ic_launcher_background)
+            Picasso.get().load(getImageAt(position)).placeholder(R.drawable.loading)
                 .into(imageView)
             container.addView(view)
             return view
@@ -135,7 +135,7 @@ class MainFragment : Fragment() {
                 }
                 3 -> {
                     val path2 =
-                        Uri.parse("android.resource://" + BuildConfig.APPLICATION_ID + "/" + R.drawable.banner)
+                        Uri.parse("android.resource://" + BuildConfig.APPLICATION_ID + "/" + R.drawable.shoe_banner)
                     path2.toString()
                 }
                 else -> thumbnail

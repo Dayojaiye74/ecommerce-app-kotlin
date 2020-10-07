@@ -51,7 +51,6 @@ class SettingsFragment : Fragment() {
 
         val user_name = utils.getUser(appDb).fname + " " + utils.getUser(appDb).lname
         name.text = user_name
-        intent.putExtra("userName",name.text)
 
         item2.setOnClickListener {
             Toast.makeText(rootView.context, "Coming Soon!!", Toast.LENGTH_LONG).show()

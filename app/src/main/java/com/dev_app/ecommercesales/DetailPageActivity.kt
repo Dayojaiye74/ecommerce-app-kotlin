@@ -11,10 +11,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.view.View
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.ScrollView
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.app.ActivityCompat
@@ -35,11 +32,14 @@ class DetailPagActivity : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_page)
-        val actionBar = supportActionBar
-        actionBar?.setDisplayHomeAsUpEnabled(true)
+        //val actionBar = supportActionBar
+        //actionBar?.setDisplayHomeAsUpEnabled(true)
         window.decorView.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
 
            // val view = inflate(this,R.layout.payment_custom_layout,null)
+
+//            supportActionBar!!.setHomeButtonEnabled(true)
+//            supportActionBar!!.setDisplayHomeAsUpEnabled(true)
 
         var scrollView = findViewById<ScrollView>(R.id.scrollView)
 
@@ -73,9 +73,10 @@ class DetailPagActivity : AppCompatActivity() {
 
         footer_cart.setOnClickListener {
 //            intent.putExtra("myprice",price.toString())
-            intent.putExtra("mytitle", descriptionTitle.text)
-           intent = Intent(this, PaymentActivity::class.java)
-            startActivity(intent)
+            //intent.putExtra("mytitle", descriptionTitle.text)
+//           intent = Intent(this, PaymentActivity::class.java)
+//            startActivity(intent)
+            Toast.makeText(this,"Card payment coming soon..",Toast.LENGTH_SHORT).show()
         }
                // mAlertDialog.dismiss()
             cardViewCall.setOnClickListener{
@@ -124,7 +125,7 @@ class DetailPagActivity : AppCompatActivity() {
     }
 
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+    /*override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> {
                 NavUtils.navigateUpFromSameTask(this)
@@ -132,7 +133,7 @@ class DetailPagActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
-    }
+    } */
 
     //...Call to order function...
     private fun onCall() {
